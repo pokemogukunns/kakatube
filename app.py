@@ -3,7 +3,7 @@ import yt_dlp
 
 app = Flask(__name__)
 
-@app.route('/download', methods=['POST'])
+@app.route('/download', methods=['GET', 'POST'])
 def download():
     video_url = request.json.get('url')
     if not video_url:
